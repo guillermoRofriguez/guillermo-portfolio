@@ -4,5 +4,5 @@ interface ContainerProps {
   children: ReactNode;
 }
 export default function Container({ children }: ContainerProps) {
-  return <section className="xl:mx-10 xl:px-5">{children}</section>;
+  return <section className="xl:mx-10 px-5">{children}</section>;
 }
