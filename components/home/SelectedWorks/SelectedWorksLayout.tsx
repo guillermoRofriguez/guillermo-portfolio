@@ -9,7 +9,7 @@ export default function SelectedWorksLayout() {
   const [isLouder, setIsLouder] = useState(true);
 
   const [worksList, setWorksList] = useState<Works[]>([]);
-  console.log(WorksList);
+  // console.log(WorksList);
   
   useEffect(() => {
     const getWorksList = () => {
