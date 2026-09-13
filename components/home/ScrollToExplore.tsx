@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ScrollToExplore() {
   return (
-    <section className="flex flex-col items-center gap-y-12 mt-16">
+    <section data-aos="fade-up" className="flex flex-col items-center gap-y-12 mt-16">
       <div className="relative h-162.5 w-full overflow-hidden">
         <div className="absolute inset-0 animate-parallax">
           <Image

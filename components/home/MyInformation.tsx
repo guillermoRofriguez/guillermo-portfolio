@@ -1,6 +1,14 @@
 export default function AboutMe() {
+  const handleScrollComponent = (id: string) => {
+    const section = document.getElementById(id);
+
+    section?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
   return (
-    <div className="flex flex-col pt-8 mt-9.75 gap-y-6">
+    <div data-aos="fade-up" className="flex flex-col pt-8 mt-9.75 gap-y-6">
       <div className="flex items-start gap-x-2">
         <hr className="w-8 text-(--primary) mt-4" />
         <p className="text-(--primary) text-[14px]">FULL STACK DEVELOPER</p>
@@ -16,8 +24,12 @@ export default function AboutMe() {
       </p>
 
       <div className="flex items-center lg:flex-row flex-col pt-6 gap-4">
-        <button className="focus:outline-none cursor-pointer bg-(--primary) px-6 h-12 text-[#3C4A46] rounded-xs text-[14px] lg:w-auto w-full">VER PROYECTOS</button>
-        <button className="focus:outline-none cursor-pointer border border-[#3C4A46] px-6 h-12 rounded-xs text-[#DDE4E1] text-[14px] lg:w-auto w-full">CONTACTARME</button>
+        <button onClick={()=>handleScrollComponent("works")} className="focus:outline-none cursor-pointer bg-(--primary) px-6 h-12 text-[#3C4A46] rounded-xs text-[14px] lg:w-auto w-full">
+          VER PROYECTOS
+        </button>
+        <button onClick={()=>handleScrollComponent("contact-me")} className="focus:outline-none cursor-pointer border border-[#3C4A46] px-6 h-12 rounded-xs text-[#DDE4E1] text-[14px] lg:w-auto w-full">
+          CONTACTARME
+        </button>
       </div>
     </div>
   );

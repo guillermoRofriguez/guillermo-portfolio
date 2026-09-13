@@ -18,24 +18,26 @@ export default function TechnologiesLayout() {
   }, []);
 
   return (
-    <div className="flex flex-col pt-20 gap-y-12">
-      <div className="flex items-start gap-x-2">
-        <hr className="w-8 text-(--primary) mt-4" />
-        <p className="text-(--primary) text-[14px]">TECNOLOGÍAS</p>
+    <section className=" ">
+      <div data-aos="fade-up" className="flex flex-col mt-20 gap-y-12">
+        <div className="flex items-start gap-x-2">
+          <hr className="w-8 text-(--primary) mt-4" />
+          <p className="text-(--primary) text-[14px]">TECNOLOGÍAS</p>
+        </div>
+        <div className="flex flex-col gap-y-10">
+          {isLouder ? (
+            <>Cargando</>
+          ) : (
+            experienceList.map(({ title, technologies }, index) => (
+              <TechnologiesContent
+                title={title}
+                technologies={technologies}
+                key={index}
+              />
+            ))
+          )}
+        </div>
       </div>
-      <div className="flex flex-col gap-y-10">
-        {isLouder ? (
-          <>Cargando</>
-        ) : (
-          experienceList.map(({ title, technologies }, index) => (
-            <TechnologiesContent
-              title={title}
-              technologies={technologies}
-              key={index}
-            />
-          ))
-        )}
-      </div>
-    </div>
+    </section>
   );
 }

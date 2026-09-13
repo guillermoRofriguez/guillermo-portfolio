@@ -3,9 +3,9 @@ import { EnvelopeIcon } from "@heroicons/react/24/outline";
 
 export default function ContactLayout() {
   return (
-    <div className="py-32 flex flex-col items-center">
-      <p className="text-(--secondary) text-sm mb-6">
-        <EnvelopeIcon className="size-2.5" />
+    <div id="contact-me" className="py-32 flex flex-col items-center">
+      <p className="text-(--secondary) text-sm mb-6 gap-x-2 items-end flex">
+        <EnvelopeIcon className="size-4" />
         CONTACTO
       </p>
       <h1 className="mb-4 text-[40px] font-bold text-[#DDE4E1]">

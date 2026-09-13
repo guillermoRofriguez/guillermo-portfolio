@@ -23,7 +23,7 @@ export default function SelectedWorksLayout() {
   }, []);
 
   return (
-    <section className="py-24">
+    <section id="works" data-aos="fade-right" className="my-24">
       <Container>
         <h2 className="text-[48px] text-[#DDE4E1] font-bold mb-16">
           Proyectos destacados
