@@ -8,7 +8,7 @@ export default function WorksContainer(works: Works) {
     console.log(works);
     
   const { title = "", count = 0, image, tools, description="", navigate } = works || {};
-  console.log(navigate);
+  console.log(count);
   
   return (
     <section className="flex flex-col gap-y-6">

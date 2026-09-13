@@ -10,7 +10,7 @@ export default function SelectedWorksLayout() {
 
   const [worksList, setWorksList] = useState<Works[]>([]);
   // console.log(WorksList);
-  
+
   useEffect(() => {
     const getWorksList = () => {
       setWorksList(WorksList);
@@ -28,23 +28,28 @@ export default function SelectedWorksLayout() {
         <h2 className="text-[48px] text-[#DDE4E1] font-bold mb-16">
           Proyectos destacados
         </h2>
-        {isLouder ? (
-          <></>
-        ) : (
-          worksList.map(
-            ({ count, image, title, tools, description, navigate }, index) => (
-              <WorksContainer
-                title={title}
-                count={count}
-                image={image}
-                description={description}
-                tools={tools}
-                navigate={navigate}
-                key={index}
-              />
-            ),
-          )
-        )}
+        <div className="flex flex-col gap-y-18">
+          {isLouder ? (
+            <>Cargando</>
+          ) : (
+            worksList.map(
+              (
+                { count, image, title, tools, description, navigate },
+                index,
+              ) => (
+                <WorksContainer
+                  title={title}
+                  count={index + 1}
+                  image={image}
+                  description={description}
+                  tools={tools}
+                  navigate={navigate}
+                  key={index}
+                />
+              ),
+            )
+          )}
+        </div>
       </Container>
     </section>
   );
